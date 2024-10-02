@@ -4,7 +4,7 @@ describe('Invalid login', () => {
   it('should fail login given incorrect credentials', () => {
     cy.visit('https://www.demoblaze.com/')
     cy.get('a[data-target="#logInModal"]').click()
-    LoginMethods.login('username', 'password')
-    cy.wait(5000)
+    LoginMethods.login('arco', 'arco')
+    cy.get('a#nameofuser').should('contain.text', 'arco')
   });
 });

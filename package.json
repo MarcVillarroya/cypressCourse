@@ -8,7 +8,7 @@
     "open-report": "allure open",
     "test-exe": "npx cypress run --headed --env allure=true",
     "clear-report": "rimraf ./allure-report && rimraf ./allure-results",
-    "test" : "npm run clear-report && npm run test-exe && npm run generar-reporte && npm run open-report"
+    "test" : "npm run clear-report && npm run test-exe & npm run generar-reporte && npm run open-report"
   },
 
   "keywords": [],
