@@ -14,9 +14,9 @@ export class LoginMethods{
     }
 
     static login(username, password){
-        this.insertUsername(username)
-        this.insertPassword(password)
-        this.clickOnLoginButton()
+        this.insertUsername(username);
+        this.insertPassword(password);
+        this.clickOnLoginButton();
 
     }
 }
