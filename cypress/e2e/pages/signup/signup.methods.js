@@ -13,10 +13,9 @@ export class SignupMethods{
         SignupElements.buttons.signupButton.click()
     }
 
-    static login(username, password){
+    static signup(username, password){
         this.insertUsername(username);
         this.insertPassword(password);
         this.clickOnSignupButton();
-
     }
 }
