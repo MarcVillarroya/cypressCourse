@@ -4,12 +4,20 @@
   "description": "Cypress course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generar-reporte": "allure generate allure-results -o allure-report --clean",
+    "open-report": "allure open",
+    "test-exe": "npx cypress run --headed --env allure=true",
+    "clear-report": "rimraf ./allure-report && rimraf ./allure-results",
+    "test" : "npm run clear-report && npm run test-exe && npm run generar-reporte && npm run open-report"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.15.0"
+    "@shelex/cypress-allure-plugin": "^2.40.2",
+    "allure-commandline": "^2.30.0",
+    "cypress": "^12.14.0",
+    "rimraf": "^6.0.1"
   }
 }
