@@ -1,8 +1,8 @@
 export class SignupData{
     static get invalidCredentials(){
         return{
-            username: 'abc',
-            password: 'abc'
+            username: 'arco',
+            password: 'arco'
         };
     }
 }

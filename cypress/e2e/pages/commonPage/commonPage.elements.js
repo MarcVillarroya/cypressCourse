@@ -21,6 +21,9 @@ export class CommonPageElements{
             },
             get logout(){
                 return cy.contains('a', 'Log out')
+            },
+            get welcomeMessage(){
+                return cy.get("a#nameofuser");
             }
             
         }

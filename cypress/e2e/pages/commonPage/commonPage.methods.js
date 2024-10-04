@@ -41,4 +41,8 @@ export class CommonPageMethods{
         return result;
     }
 
+    static verifyWelcome(username){
+        CommonPageElements.topLinks.welcomeMessage.should('have.text', `Welcome ${username}`)
+    }
+
 }
