@@ -3,6 +3,9 @@ import { CommonPageMethods } from "../pages/commonPage/commonPage.methods"
 import { SignupMethods } from "../pages/signup/signup.methods"
 import { Logger } from "../util/logger"
 
+const username = CommonPageMethods.generateRandomString(8);
+const password = CommonPageMethods.generateRandomString(7);
+
 describe(CommonPageData.testSuites.register, ()=>{
     it('Valid registration', ()=>{
         Logger.stepNumber(1)
@@ -15,8 +18,8 @@ describe(CommonPageData.testSuites.register, ()=>{
 
         Logger.stepNumber(3)
         Logger.stepDescription("Put Correct Credentials")
-        SignupMethods.insertUsername('random')
-        SignupMethods.insertPassword('random')
+        SignupMethods.insertUsername(username)
+        SignupMethods.insertPassword(password)
 
         Logger.stepNumber(4)
         Logger.stepDescription("Click on signup Button")
