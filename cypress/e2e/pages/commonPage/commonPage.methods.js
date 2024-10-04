@@ -3,6 +3,7 @@ import { CommonPageElements } from "./commonPage.elements";
 
 export class CommonPageMethods{
     static navigateUrl(){
+        cy.clearCookies()
         cy.visit(CommonPageData.url);
     }
     static clickOnHome(){
@@ -26,4 +27,9 @@ export class CommonPageMethods{
     static clickOnLogout(){
         CommonPageElements.topLinks.logout.click()
     } 
+    static verifyAlert(expectedMessage){
+        cy.on('window:alert', (str) =>{
+            expect(str).to.equal(expectedMessage)
+        })
+    }
 }
